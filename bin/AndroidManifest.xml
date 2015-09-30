@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="GJ.helpinghand"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+ 
+	<permission android:protectionLevel="signature"
+    		android:name=".permission.C2D_MESSAGE" />
+	<uses-permission android:name=".permission.C2D_MESSAGE" /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppBaseTheme" >
+        
+        <service android:name="com.parse.PushService" />
+		<receiver android:name="com.parse.ParseBroadcastReceiver">
+  			<intent-filter>
+    			<action android:name="android.intent.action.BOOT_COMPLETED" />
+    			<action android:name="android.intent.action.USER_PRESENT" />
+  			</intent-filter>
+		</receiver>
+		<receiver android:name="com.parse.GcmBroadcastReceiver"
+    		android:permission="com.google.android.c2dm.permission.SEND">
+  			<intent-filter>
+		    	<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+    			<action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+ 
+    		<!--
+      IMPORTANT: Change "com.parse.tutorials.pushnotifications" to match your app's package name.
+    -->
+    		<category android:name=".pushnotifications" />
+  		</intent-filter>
+		</receiver>
+		
+		<receiver android:name="com.parse.ParsePushBroadcastReceiver" android:exported="false">
+  			<intent-filter>
+    			<action android:name="com.parse.push.intent.RECEIVE" />
+    			<action android:name="com.parse.push.intent.DELETE" />
+    			<action android:name="com.parse.push.intent.OPEN" />
+			  </intent-filter>
+		</receiver>
+	        
+        <activity
+            android:name=".Splash"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+		
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name=".Drawer"
+            android:label="@string/title_activity_drawer"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name=".Profile_setting"
+            android:label="@string/title_activity_profile_setting"
+            android:parentActivityName=".Settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name=".Forgot_password"
+            android:label="@string/title_activity_forgot_password"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name=".New_ac"
+            android:label="@string/title_activity_new_ac"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".My_tab"
+            android:label="@string/title_activity_my_tab"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Home_material"
+            android:label="@string/title_activity_home_material"
+            android:screenOrientation="portrait"
+            android:theme="@style/DesignToUse" >
+        </activity>
+        <activity
+            android:name=".Share"
+            android:label="@string/title_activity_share"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name=".Group_Detail"
+            android:label="@string/title_activity_group__detail"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name=".Home1"
+            android:label="@string/title_activity_home1" >
+        </activity>
+    </application>
+
+</manifest>

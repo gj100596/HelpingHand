@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#2E303C"
+    tools:context="GJ.helpinghand.Group_Detail" >
+	
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/hh_group"
+        android:layout_weight="10">
+
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentLeft="true"
+	        android:orientation="vertical">
+	        
+	        <TextView
+	         	android:id="@+id/gName"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textColor="#CC66FF33"
+	        android:paddingLeft="5dp"       
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+	        
+	        <TextView
+	            android:id="@+id/gOwner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textColor="#66FF33"
+	        android:paddingLeft="5dp"
+	        android:textAppearance="?android:attr/textAppearanceSmall" />
+	        
+	        <View
+   				android:layout_width="match_parent"
+   				android:layout_height="1dp"
+   				android:background="#FFFFFF" />
+	        
+	        <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textColor="#CC66FF33"
+	        android:paddingLeft="5dp"
+	        android:text="Members"	        
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+	        
+	        <View
+   				android:layout_width="match_parent"
+   				android:layout_height="1dp"
+   				android:background="#FFFFFF" />
+	        
+	    </LinearLayout>
+	    
+	</RelativeLayout>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    android:layout_weight="5" >
+		<RelativeLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent">
+	
+			<ListView 
+	    		android:layout_width="match_parent"
+        		android:layout_height="match_parent"
+        		android:id="@+id/member_list" />
+			
+			<LinearLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_alignParentBottom="true">
+			    
+			    <Button 
+			        android:id="@+id/add"
+			        android:layout_width="match_parent"
+			        android:layout_height="match_parent"
+			        android:text="Add Members"
+			        android:layout_weight="0.5"
+			        android:layout_marginRight="5dp"
+			        android:background="@color/my_primary"/>
+			    
+			    <Button
+			        android:id="@+id/leave" 
+			        android:layout_width="match_parent"
+			        android:layout_height="match_parent"
+			        android:text="Leave Group"
+			        android:layout_weight="0.5"
+			        android:background="@color/my_primary"/>
+			</LinearLayout>
+		
+		</RelativeLayout>
+	</LinearLayout>
+	
+</LinearLayout>

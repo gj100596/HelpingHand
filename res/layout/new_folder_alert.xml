@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fold_alert"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="35dp"
+    android:padding="10dp"
+    card_view:cardBackgroundColor="#ABD2FA"
+    card_view:cardElevation="10dp"
+    android:orientation="horizontal"
+    card_view:cardCornerRadius="5dp" 
+    card_view:contentPaddingTop="10dp">
+
+    <RelativeLayout
+        android:id="@+id/alerttry"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        
+        <EditText 
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/fold_alert" />
+
+        <Button
+            android:id="@+id/go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/outline"
+            android:text="@string/go" />
+
+    </RelativeLayout>
+
+        
+</android.support.v7.widget.CardView>

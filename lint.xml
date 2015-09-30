@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="NewApi" severity="ignore">
+        <ignore path="src/GJ/helpinghand/My_Folder_Fragment.java" />
+        <ignore path="src/GJ/helpinghand/New_ac.java" />
+    </issue>
+</lint>

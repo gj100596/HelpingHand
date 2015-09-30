@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="#ABD2FA"
+    android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/outline"
+            android:hint="Enter Group Name"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <LinearLayout
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/privateButton"
+                android:layout_width="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/group_selected"
+                android:text="Private"
+                android:layout_weight="0.5"/>
+
+            <Button
+                android:id="@+id/publicButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/group_not_selected"
+                android:text="Public"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+        
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+            <EditText 
+            	android:layout_width="match_parent"
+            	android:layout_height="match_parent"
+            	android:background="@drawable/outline"
+            	android:gravity="top"
+            	android:padding="5dp"
+            	android:hint="Enter User-Id of Members"
+            	android:id="@+id/members"/>
+            
+            <Button 
+                android:id="@+id/create"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:background="#ABD2FA"
+                android:text="Create"/>
+		</RelativeLayout>
+
+</LinearLayout>
