@@ -34,7 +34,7 @@ public class Server_Interaction {
 		try {
 			DefaultHttpClient httpclient = new DefaultHttpClient();
 			//HttpPost con = new HttpPost("http://192.168.1.40:45450/login.php");
-			HttpPost con = new HttpPost("http://helpinghandgj100596.comule.com/login.php");
+			HttpPost con = new HttpPost("http://yourserver/login.php");
 			con.setEntity(new UrlEncodedFormEntity(param));
 			
 			HttpResponse response = httpclient.execute(con);
@@ -70,7 +70,7 @@ public class Server_Interaction {
 		try {
 			DefaultHttpClient httpclient = new DefaultHttpClient();
 			//HttpPost con = new HttpPost("http://192.168.1.40:45450/login.php");
-			HttpPost con = new HttpPost("http://helpinghandgj100596.comule.com/new_ac.php");
+			HttpPost con = new HttpPost("http://yourserver/new_ac.php");
 			con.setEntity(new UrlEncodedFormEntity(param));
 			
 			HttpResponse response = httpclient.execute(con);
@@ -101,7 +101,7 @@ public class Server_Interaction {
 		
 		try {
 			HttpClient client = new DefaultHttpClient();
-			HttpPost request = new HttpPost("http://helpinghandgj100596.comule.com/profile.php");	
+			HttpPost request = new HttpPost("http://yourserver/profile.php");	
 			request.setEntity(new UrlEncodedFormEntity(params));
 			
 			HttpResponse response = client.execute(request);
@@ -145,7 +145,7 @@ public class Server_Interaction {
 		
 		try {
 			HttpClient client = new DefaultHttpClient();
-			HttpPost post = new HttpPost("http://helpinghandgj100596.comule.com/my_data.php");
+			HttpPost post = new HttpPost("http://yourserver/my_data.php");
 			
 			post.setEntity(new UrlEncodedFormEntity(params));
 			HttpResponse response = client.execute(post);
@@ -180,7 +180,7 @@ public class Server_Interaction {
 		
 		try {
 			HttpClient client = new DefaultHttpClient();
-			HttpPost post = new HttpPost("http://helpinghandgj100596.comule.com/my_folder.php");
+			HttpPost post = new HttpPost("http://yourserver/my_folder.php");
 			
 			post.setEntity(new UrlEncodedFormEntity(params));
 			HttpResponse response = client.execute(post);
@@ -215,7 +215,7 @@ public class Server_Interaction {
 		
 		try {
 			HttpClient client = new DefaultHttpClient();
-			HttpPost post = new HttpPost("http://helpinghandgj100596.comule.com/my_group.php");
+			HttpPost post = new HttpPost("http://yourserver/my_group.php");
 			
 			post.setEntity(new UrlEncodedFormEntity(params));
 			HttpResponse response = client.execute(post);
@@ -249,7 +249,7 @@ public class Server_Interaction {
 		
 		try {
 			HttpClient client = new DefaultHttpClient();
-			HttpPost post = new HttpPost("http://helpinghandgj100596.comule.com/group_detail.php");
+			HttpPost post = new HttpPost("http://yourserver/group_detail.php");
 			
 			post.setEntity(new UrlEncodedFormEntity(params));
 			HttpResponse response = client.execute(post);
@@ -284,7 +284,7 @@ public class Server_Interaction {
 		
 		try {
 			HttpClient client = new DefaultHttpClient();
-			HttpPost post = new HttpPost("http://helpinghandgj100596.comule.com/share_file.php");
+			HttpPost post = new HttpPost("http://yourserver/share_file.php");
 			
 			post.setEntity(new UrlEncodedFormEntity(params));
 			HttpResponse response = client.execute(post);
@@ -319,7 +319,7 @@ public class Server_Interaction {
 		
 		try {
 			HttpClient client = new DefaultHttpClient();
-			HttpPost post = new HttpPost("http://helpinghandgj100596.comule.com/shared_folder.php");
+			HttpPost post = new HttpPost("http://yourserver/shared_folder.php");
 			
 			post.setEntity(new UrlEncodedFormEntity(params));
 			HttpResponse response = client.execute(post);
@@ -354,7 +354,7 @@ public class Server_Interaction {
 		
 		try {
 			HttpClient client = new DefaultHttpClient();
-			HttpPost post = new HttpPost("http://helpinghandgj100596.comule.com/user_name.php");
+			HttpPost post = new HttpPost("http://yourserver/user_name.php");
 			
 			post.setEntity(new UrlEncodedFormEntity(params));
 			HttpResponse response = client.execute(post);
@@ -384,7 +384,7 @@ public class Server_Interaction {
 	public void create_group(ArrayList<NameValuePair> params){
 		try {
 			HttpClient client = new DefaultHttpClient();
-			HttpPost post = new HttpPost("http://helpinghandgj100596.comule.com/creategroup.php");
+			HttpPost post = new HttpPost("http://yourserver/creategroup.php");
 			
 			post.setEntity(new UrlEncodedFormEntity(params));
 			HttpResponse response = client.execute(post);
@@ -404,7 +404,7 @@ public class Server_Interaction {
 	public void update_group(ArrayList<NameValuePair> params){
 		try {
 			HttpClient client = new DefaultHttpClient();
-			HttpPost post = new HttpPost("http://helpinghandgj100596.comule.com/updategroup.php");
+			HttpPost post = new HttpPost("http://yourserver/updategroup.php");
 			
 			post.setEntity(new UrlEncodedFormEntity(params));
 			HttpResponse response = client.execute(post);
@@ -422,10 +422,10 @@ public class Server_Interaction {
 	}
 	
 	public String new_folder(ArrayList<NameValuePair> params){
-		http://helpinghandgj100596.comule.com					
+		http://yourserver					
 		try {
 			HttpClient client = new DefaultHttpClient();
-			HttpPost post = new HttpPost("http://helpinghandgj100596.comule.com/my_new_folder.php");
+			HttpPost post = new HttpPost("http://yourserver/my_new_folder.php");
 			
 			post.setEntity(new UrlEncodedFormEntity(params));
 			HttpResponse response = client.execute(post);
@@ -454,7 +454,7 @@ public class Server_Interaction {
 		
 		try {
 			HttpClient client = new DefaultHttpClient();
-			HttpPost post = new HttpPost("http://helpinghandgj100596.comule.com/shared_folder_work.php");
+			HttpPost post = new HttpPost("http://yourserver/shared_folder_work.php");
 			
 			post.setEntity(new UrlEncodedFormEntity(params));
 			HttpResponse response = client.execute(post);
@@ -484,7 +484,7 @@ public class Server_Interaction {
 		
 		try {
 			HttpClient client = new DefaultHttpClient();
-			HttpPost post = new HttpPost("http://helpinghandgj100596.comule.com/shared_file_work.php");
+			HttpPost post = new HttpPost("http://yourserver/shared_file_work.php");
 			
 			post.setEntity(new UrlEncodedFormEntity(params));
 			HttpResponse response = client.execute(post);
@@ -514,7 +514,7 @@ public class Server_Interaction {
 		
 		try {
 			HttpClient client = new DefaultHttpClient();
-			HttpPost post = new HttpPost("http://helpinghandgj100596.comule.com/my_file_work.php");
+			HttpPost post = new HttpPost("http://yourserver/my_file_work.php");
 			
 			post.setEntity(new UrlEncodedFormEntity(params));
 			HttpResponse response = client.execute(post);
@@ -546,9 +546,9 @@ public class Server_Interaction {
 			HttpClient client = new DefaultHttpClient();
 			HttpPost post;
 			if(mode==0)
-				post = new HttpPost("http://helpinghandgj100596.comule.com/sharing_file_thru_group.php");
+				post = new HttpPost("http://yourserver/sharing_file_thru_group.php");
 			else
-				post = new HttpPost("http://helpinghandgj100596.comule.com/sharing_file_thru_member.php");
+				post = new HttpPost("http://yourserver/sharing_file_thru_member.php");
 			
 			post.setEntity(new UrlEncodedFormEntity(params));
 			HttpResponse response = client.execute(post);
@@ -580,9 +580,9 @@ public class Server_Interaction {
 			HttpClient client = new DefaultHttpClient();
 			HttpPost post;
 			if(mode==0)
-				post = new HttpPost("http://helpinghandgj100596.comule.com/sharing_folder_thru_group.php");
+				post = new HttpPost("http://yourserver/sharing_folder_thru_group.php");
 			else
-				post = new HttpPost("http://helpinghandgj100596.comule.com/sharing_folder_thru_member.php");
+				post = new HttpPost("http://yourserver/sharing_folder_thru_member.php");
 			
 			post.setEntity(new UrlEncodedFormEntity(params));
 			HttpResponse response = client.execute(post);
@@ -612,7 +612,7 @@ public class Server_Interaction {
 		
 		try {
 			HttpClient client = new DefaultHttpClient();
-			HttpPost post = new HttpPost("http://helpinghandgj100596.comule.com/suggestion.php");
+			HttpPost post = new HttpPost("http://yourserver/suggestion.php");
 			
 			post.setEntity(new UrlEncodedFormEntity(params));
 			HttpResponse response = client.execute(post);
@@ -646,8 +646,8 @@ public class Server_Interaction {
 	public String download_file(String file, String saveDir){
 		
 		try {
-			//URL url = new URL("http://helpinghandgj100596.comule.com/Docs" + file);
-			URL url = new URL("http://helpinghandgj100596.comule.com/Docs/"+file);
+			//URL url = new URL("http://yourserver/Docs" + file);
+			URL url = new URL("http://yourserver/Docs/"+file);
 			HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
 			int responseCode = httpConn.getResponseCode();
 			
@@ -700,7 +700,7 @@ public class Server_Interaction {
 	    try {
 	        FileInputStream fileInputStream = new FileInputStream(new File(filename));
  
-	        URL url = new URL("http://helpinghandgj100596.comule.com/upload.php");
+	        URL url = new URL("http://yourserver/upload.php");
 	        connection = (HttpURLConnection) url.openConnection();
  
 	        connection.setDoInput(true);
@@ -789,7 +789,7 @@ public class Server_Interaction {
  
 	    try {
  
-	        URL url = new URL("http://helpinghandgj100596.comule.com/upload_image.php");
+	        URL url = new URL("http://yourserver/upload_image.php");
 	        connection = (HttpURLConnection) url.openConnection();
  
 	        connection.setDoInput(true);
