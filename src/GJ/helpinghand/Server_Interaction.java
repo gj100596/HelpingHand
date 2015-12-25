@@ -777,48 +777,4 @@ public class Server_Interaction {
 	    }
 	    return "error";
 	}
-	
-	public void upload_image(byte[] dp,String name){
-	    
-	    HttpURLConnection connection = null;
-	    DataOutputStream outputStream = null;
- 
-	    String lineEnd = "\r\n";
-	    String twoHyphens = "--";
-	    String boundary = "*****";
- 
-	    try {
- 
-	        URL url = new URL("http://yourserver/upload_image.php");
-	        connection = (HttpURLConnection) url.openConnection();
- 
-	        connection.setDoInput(true);
-	        connection.setDoOutput(true);
-	        connection.setUseCaches(false);
-	        connection.setRequestMethod("POST");
- 
-	        connection.setRequestProperty("Connection", "Keep-Alive");
-	        connection.setRequestProperty("Content-Type",
-	                "multipart/form-data; boundary=" + boundary);
- 
-	        outputStream = new DataOutputStream(connection.getOutputStream());
-	        outputStream.writeBytes(twoHyphens + boundary + lineEnd);
-	        outputStream.writeBytes("Content-Disposition: form-data; name=\"file\";filename=\""
-	                + name + "\"" + lineEnd);
-	        outputStream.writeBytes(lineEnd);
- 
-            try {
-            	outputStream.write(dp, 0, dp.length);
-            } catch (OutOfMemoryError e) {
-                  e.printStackTrace();
-            }
-	        
-	        outputStream.writeBytes(lineEnd);
-	        outputStream.writeBytes(twoHyphens + boundary + twoHyphens
-	                + lineEnd);
-	    } catch (Exception ex) {
-	        // Exception handling
-	        ex.printStackTrace();
-	    }
-	}
 }
